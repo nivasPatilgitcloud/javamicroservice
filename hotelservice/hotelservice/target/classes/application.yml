@@ -1,0 +1,45 @@
+
+#server.port = 8083
+#
+#spring.datasource.url=jdbc:mysql://localhost:3306/microserviceportf
+#spring.datasource.username=root
+#spring.datasource.password=Mysql@2238399
+#spring.jpa.hibernate.ddl-auto=update
+#spring.jpa.show-sql=true
+#spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+#spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect
+#
+#spring.application.name=HOTEL-SERVICE
+#eureka.client.fetch-registry=true
+#eureka.client.register-with-eureka=true
+#eureka.instance.prefer-ip-address=true
+#eureka.client.service-url.defaultZone=http://localhost:8761/eureka
+
+server:
+  port: 8083
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/microserviceportf
+    username: root
+    password: Mysql@2238399
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+  application:
+    name: HOTEL-SERVICE
+  profiles:
+    active: default
+
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    prefer-ip-address: true
